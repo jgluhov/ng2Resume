@@ -8,9 +8,11 @@ import {Component, View} from 'angular2/core'
 })
 
 @View({
-    template: `<h1>The best programmer is {{name}}</h1>`
+    template: `
+    <h1>The best programmer is {{name}}</h1>
+    `
 })
 
 export class AppComponent {
-    name: string = 'JGluhov'
+    name:string = 'JGluhov';
 }
