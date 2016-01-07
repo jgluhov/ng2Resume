@@ -1,0 +1,35 @@
+{
+  "name": "ng2resume",
+  "version": "0.0.1",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jgluhov/ng2Resume.git"
+  },
+  "keywords": [
+    "resume"
+  ],
+  "author": "JGluhov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jgluhov/ng2Resume/issues"
+  },
+  "homepage": "https://github.com/jgluhov/ng2Resume#readme",
+  "devDependencies": {
+    "copy-webpack-plugin": "^0.3.3",
+    "ts-loader": "^0.7.2",
+    "typescript": "^1.7.5"
+  },
+  "dependencies": {
+    "angular2": "^2.0.0-beta.0",
+    "es6-promise": "^3.0.2",
+    "es6-shim": "^0.33.13",
+    "reflect-metadata": "^0.1.2",
+    "rxjs": "^5.0.0-beta.0",
+    "zone.js": "^0.5.10"
+  }
+}
