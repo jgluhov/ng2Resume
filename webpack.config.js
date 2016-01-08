@@ -15,7 +15,7 @@ module.exports = {
   devtool: 'inline-source-map',
   watch: true,
   watchOptions: {
-    aggregateTimeout: 100
+    aggregateTimeout: 300
   },
   plugins: [
     new CopyWebpackPlugin([ { from: 'src/assets', to: 'assets' } ])

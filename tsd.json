@@ -7,6 +7,9 @@
   "installed": {
     "d3/d3.d.ts": {
       "commit": "81b951f1ac437d1eb5ff5171a0bfa6c467634b13"
+    },
+    "lodash/lodash.d.ts": {
+      "commit": "4639f126d25956b6a7ddf8462dd4e73101983b85"
     }
   }
 }
