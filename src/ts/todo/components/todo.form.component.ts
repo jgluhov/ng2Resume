@@ -10,7 +10,7 @@ import {TodoModel} from './../services/todo.model.ts';
     providers: [TodoService],
     template: `<div>
         <form (submit)="onSubmit()">
-            <input type="text" [(ngModel)]="todoModel.title" placeholder="What do you need to do?">
+            <input type="text" [(ngModel)]="todoModel.title" placeholder="What to do?">
         </form>
     </div>`
 })
