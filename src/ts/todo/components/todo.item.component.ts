@@ -3,7 +3,7 @@
  */
 import {Component, Input, Output, EventEmitter} from 'angular2/core';
 import {ViewEncapsulation} from 'angular2/core';
-import {TodoModel} from "./todo.model";
+import {TodoModel} from "./../services/todo.model.ts";
 
 @Component({
     encapsulation: ViewEncapsulation.Native,

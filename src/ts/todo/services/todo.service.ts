@@ -1,10 +1,10 @@
 /**
  * Created by jgluhov on 07/01/16.
  */
-import {Injectable} from 'angular2/core';
-import {TodoModel} from './todo.model';
+//import {Injectable} from 'angular2/core';
+import {TodoModel} from './todo.model.ts';
 
-@Injectable()
+//@Injectable()
 export class TodoService {
     todos: Array<TodoModel> = [
         new TodoModel("eat"),
@@ -26,13 +26,18 @@ export class TodoService {
     }
 
     toggleTodo(todo: TodoModel) {
-        todo.toggle();
-
         let i = this.todos.indexOf(todo);
+
+        let status =
+                todo.status == "started"
+                    ? "completed"
+                    : "started";
+
+        let toggledTodo = <TodoModel>_.assign(todo, {status});
 
         this.todos = [
             ...this.todos.slice(0, i),
-            todo,
+            toggledTodo,
             ...this.todos.slice(i + 1)
         ];
     }

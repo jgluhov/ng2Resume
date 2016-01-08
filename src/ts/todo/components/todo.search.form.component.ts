@@ -6,7 +6,7 @@ import {Component, Output, EventEmitter} from 'angular2/core';
 @Component({
     selector: 'todo-search-form',
     template: `<div>
-        <input #input type="text" (input)="update.emit(input.value)">
+        <input #input type="text" (input)="update.emit(input.value)" placeholder="Search">
     </div>`
 })
 
