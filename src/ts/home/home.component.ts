@@ -9,7 +9,7 @@ import {Component, View} from 'angular2/core';
 
 @View({
     template: `
-        Welcome to home page
+        Welcome to home pages
     `
 })
 

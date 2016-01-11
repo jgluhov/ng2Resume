@@ -1,6 +1,7 @@
 /**
  * Created by jgluhov on 11/01/16.
  */
+import './navbar.component.styl';
 import {Component, View, provide} from 'angular2/core';
 
 import {
@@ -22,8 +23,7 @@ import {Routes} from './../routes.config'
 
 @View({
     directives: [ROUTER_DIRECTIVES],
-    templateUrl: './src/ts/navbar/navbar.component.html',
-    styleUrls: ['navbar.component.css']
+    templateUrl: './src/ts/navbar/navbar.component.html'
 })
 
 export class NavbarComponent {
