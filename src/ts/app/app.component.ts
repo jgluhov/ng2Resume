@@ -4,7 +4,7 @@
 import './app.component.styl';
 import {Component, View, provide} from 'angular2/core';
 //import {TodoComponent} from './todo/components/todo.component';
-import {NavbarComponent} from './navbar/navbar.component';
+import {NavbarComponent} from '../components/navbar/navbar.component.ts';
 
 import {
     ROUTER_DIRECTIVES,
@@ -13,7 +13,7 @@ import {
     HashLocationStrategy
 } from 'angular2/router';
 import {RouteConfig} from 'angular2/router';
-import {APP_ROUTES} from './routes.config'
+import {APP_ROUTES} from './../routes.config'
 
 @Component({
     selector: 'app',
@@ -26,7 +26,6 @@ import {APP_ROUTES} from './routes.config'
 @View({
     directives: [ROUTER_DIRECTIVES, NavbarComponent],
     template: `
-    <h1>The best programmer is {{name}}</h1>
     <navbar></navbar>
     <router-outlet></router-outlet>
     `
@@ -35,5 +34,5 @@ import {APP_ROUTES} from './routes.config'
 @RouteConfig(APP_ROUTES)
 
 export class AppComponent {
-    name:string = 'JGluhov';
+    constructor(){}
 }

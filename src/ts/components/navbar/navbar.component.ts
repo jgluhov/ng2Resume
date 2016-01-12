@@ -5,17 +5,19 @@ import './navbar.component.styl';
 import * as template from './navbar.component.jade';
 
 import {Component, View, provide} from 'angular2/core';
+import {
+    RouterLink
+} from 'angular2/router';
 
-import {Routes} from './../routes.config'
+import {Routes} from './../../routes.config'
 
 @Component({
     selector: 'navbar'
 })
 
 @View({
-    template: template()
+    directives: [RouterLink],
+    template: template(Routes)
 })
 
-export class NavbarComponent {
-    routes = Routes;
-}
+export class NavbarComponent {}

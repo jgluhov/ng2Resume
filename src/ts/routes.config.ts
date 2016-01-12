@@ -3,24 +3,33 @@
  */
 import {RouteDefinition} from 'angular2/router';
 
-import {HomeComponent} from './home/home.component'
-import {AboutComponent} from "./about/about.component";
+import {HomeComponent} from './pages/home/home.component'
+import {AboutComponent} from "./pages/about/about.component";
+import {ContactsComponent} from "./pages/contacts/contacts.component";
 
 export const Routes = {
-    home: {
-        path: '/',
-        as: 'Home',
-        component: HomeComponent,
-        link: ['/Home'],
-        useAsDefault: true
-    },
-    about: {
-        path: '/about',
-        as: 'About',
-        component: AboutComponent,
-        link: ['/About']
+    items: {
+        home: {
+            path: '/',
+            as: 'Home',
+            component: HomeComponent,
+            link: ["[\'/Home\']"],
+            useAsDefault: true
+        },
+        about: {
+            path: '/about',
+            as: 'About',
+            component: AboutComponent,
+            link: ["[\'/About\']"]
+        },
+        contacts: {
+            path: '/contacts',
+            as: 'Contacts',
+            component: ContactsComponent,
+            link: ["[\'/Contacts\']"]
+        }
     }
 };
 
 export const APP_ROUTES: RouteDefinition[] =
-    Object.keys(Routes).map((name) => Routes[name]);
+    Object.keys(Routes.items).map((name) => Routes.items[name]);
