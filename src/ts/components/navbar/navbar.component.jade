@@ -3,7 +3,7 @@ nav
   ul
     each item in items
       li
-        a.nav-item(router-link="#{item.link}")= item.as
+        a.nav-item([routerLink]="#{item.link}")= item.as
 
 //li
 //  a.nav-item(href="#")= home.as
