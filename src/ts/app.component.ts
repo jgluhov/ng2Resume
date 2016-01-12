@@ -1,6 +1,7 @@
 /**
  * Created by jgluhov on 07/01/16.
  */
+import './app.component.styl';
 import {Component, View, provide} from 'angular2/core';
 //import {TodoComponent} from './todo/components/todo.component';
 import {NavbarComponent} from './navbar/navbar.component';

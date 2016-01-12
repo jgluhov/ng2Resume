@@ -4,8 +4,7 @@
 var webpack = require('webpack');
 var CopyWebpackPlugin  = require('copy-webpack-plugin');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
-
-console.log(process.env.NODE_ENV)
+var koutoSwiss = require( "kouto-swiss" );
 
 module.exports = {
   entry: {
@@ -17,7 +16,7 @@ module.exports = {
     filename: '[name].js'
   },
   resolve: {
-    extensions: ['', '.webpack.js', '.web.js', '.ts', '.js', '.html']
+    extensions: ['', '.webpack.js', '.web.js', '.ts', '.js', '.jade']
   },
   devtool: 'inline-source-map',
   watch: true,
@@ -31,9 +30,31 @@ module.exports = {
   ],
   module: {
     loaders: [
-      {test: /\.ts$/, loader: 'ts-loader', exclude: /node_modules/ },
-      {test: /\.styl$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader!stylus-loader") }
+      {
+        test: /\.ts$/,
+        loader: 'ts',
+        query: {
+          'ignoreDiagnostics': [
+            2307 // 2307 -> Cannot find module [*.jade]
+          ]
+        },
+        exclude: /node_modules/
+      },
+      {
+        test: /\.styl$/,
+        loader: ExtractTextPlugin.extract("style", "css!stylus"),
+        exclude: /node_modules/
+      },
+      {
+        test: /\.jade$/,
+        loader: 'jade',
+        exclude: /node_modules/
+      }
     ]
+  },
+  stylus: {
+    use: [koutoSwiss()],
+    import: ['~kouto-swiss/index.styl']
   },
   devServer: {
     host: 'localhost',

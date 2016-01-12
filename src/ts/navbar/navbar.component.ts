@@ -2,6 +2,8 @@
  * Created by jgluhov on 11/01/16.
  */
 import './navbar.component.styl';
+import * as template from './navbar.component.jade';
+
 import {Component, View, provide} from 'angular2/core';
 
 import {
@@ -23,7 +25,7 @@ import {Routes} from './../routes.config'
 
 @View({
     directives: [ROUTER_DIRECTIVES],
-    templateUrl: './src/ts/navbar/navbar.component.html'
+    template: template()
 })
 
 export class NavbarComponent {

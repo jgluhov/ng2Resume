@@ -21,6 +21,9 @@
   "homepage": "https://github.com/jgluhov/ng2Resume#readme",
   "devDependencies": {
     "copy-webpack-plugin": "^0.3.3",
+    "jade": "^1.11.0",
+    "jade-loader": "^0.8.0",
+    "kouto-swiss": "^0.11.14",
     "ts-loader": "^0.7.2",
     "typescript": "^1.7.5",
     "webpack": "^1.12.11",
