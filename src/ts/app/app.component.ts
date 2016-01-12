@@ -2,12 +2,13 @@
  * Created by jgluhov on 07/01/16.
  */
 import './app.component.styl';
+import * as template from './app.component.jade';
+
 import {Component, View, provide} from 'angular2/core';
-//import {TodoComponent} from './todo/components/todo.component';
+
 import {NavbarComponent} from '../components/navbar/navbar.component.ts';
 
 import {
-    ROUTER_DIRECTIVES,
     ROUTER_PROVIDERS,
     LocationStrategy,
     HashLocationStrategy
@@ -24,11 +25,8 @@ import {APP_ROUTES} from './../routes.config'
 })
 
 @View({
-    directives: [ROUTER_DIRECTIVES, NavbarComponent],
-    template: `
-    <navbar></navbar>
-    <router-outlet></router-outlet>
-    `
+    directives: [NavbarComponent],
+    template: template()
 })
 
 @RouteConfig(APP_ROUTES)
