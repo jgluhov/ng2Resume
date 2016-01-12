@@ -1,2 +1,73 @@
-.navbar
-  background-color green
+$bg-color = #222
+$bg-hover-color = #444
+$color = #fff
+
+navbar
+  > nav
+    position relative
+    width 100%
+    background-color $bg-color
+    height 70px
+    color $color
+
+    > .brand
+      float left
+      height 40px
+      padding 15px 30px
+      font-size 1.4em
+      line-height 40px
+
+    ul
+      margin 0
+      padding 0
+      list-style-type none
+
+    > ul
+      float left
+
+      > li
+        float left
+
+        .nav-item
+          display inline-block
+          padding 15px 20px
+          height 40px
+          line-height 40px
+          color $color
+          text-decoration none
+
+          &:hover
+            background-color $bg-hover-color
+
+          &:focus
+            background-color $bg-hover-color
+            ~ .nav-content
+              max-height 400px
+              transition max-height .3s ease-in;
+
+        .nav-content
+          position absolute
+          top 70px
+          overflow hidden
+          background-color $bg-color
+          color $color
+          max-height 0
+
+          .nav-sub
+            padding 20px
+
+            a
+              color #fff
+              text-decoration none
+              display inline-block
+              padding 5px 0
+
+              &:hover
+                text-decoration underline
+
+
+
+
+
+
+

@@ -1,6 +1,25 @@
-nav.navbar
+nav
+  .brand JGluhov
   ul
-    li: a([routerLink]="routes.home.link") Home
-    li: a([routerLink]="routes.about.link") About
-
-router-outlet
+    li
+      a.nav-item(href="#") Home
+      .nav-content
+        .nav-sub
+          ul
+            li: a(href="#") About us
+            li: a(href="#") Who you are?
+            li: a(href="#") What about you?
+    li
+      a.nav-item(href="#") About
+      .nav-content
+        .nav-sub
+          ul
+            li: a(href="#") Learn more
+    li
+      a.nav-item(href="#") Dropdown
+      .nav-content
+        .nav-sub
+          ul
+            li: a(href="#") About us
+            li: a(href="#") Who you are?
+            li: a(href="#") What about you?
