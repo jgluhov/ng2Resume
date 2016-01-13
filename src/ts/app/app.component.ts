@@ -9,6 +9,7 @@ import {Component, View, provide} from 'angular2/core';
 import {NavbarComponent} from '../components/navbar/navbar.component.ts';
 
 import {
+    ROUTER_DIRECTIVES,
     ROUTER_PROVIDERS,
     LocationStrategy,
     HashLocationStrategy
@@ -25,7 +26,7 @@ import {APP_ROUTES} from './../routes.config'
 })
 
 @View({
-    directives: [NavbarComponent],
+    directives: [ROUTER_DIRECTIVES, NavbarComponent],
     template: template()
 })
 

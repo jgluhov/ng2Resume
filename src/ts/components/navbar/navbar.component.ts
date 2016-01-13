@@ -6,7 +6,7 @@ import * as template from './navbar.component.jade';
 
 import {Component, View, provide} from 'angular2/core';
 import {
-    RouterLink
+    ROUTER_DIRECTIVES
 } from 'angular2/router';
 
 import {Routes} from './../../routes.config'
@@ -16,7 +16,7 @@ import {Routes} from './../../routes.config'
 })
 
 @View({
-    directives: [RouterLink],
+    directives: [ROUTER_DIRECTIVES],
     template: template(Routes)
 })
 
