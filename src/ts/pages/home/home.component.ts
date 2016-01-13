@@ -9,8 +9,12 @@ import {Component, View} from 'angular2/core';
 
 @View({
     template: `
-        Welcome to home pages
+
     `
 })
 
-export class HomeComponent {}
+export class HomeComponent {
+    constructor(){
+
+    }
+}

@@ -6,7 +6,8 @@ import * as template from './app.component.jade';
 
 import {Component, View, provide} from 'angular2/core';
 
-import {NavbarComponent} from '../components/navbar/navbar.component.ts';
+import {NavbarComponent} from '../components/navbar/navbar.component';
+import {D3Component} from '../components/d3/d3.component';
 
 import {
     ROUTER_DIRECTIVES,
@@ -26,7 +27,11 @@ import {APP_ROUTES} from './../routes.config'
 })
 
 @View({
-    directives: [ROUTER_DIRECTIVES, NavbarComponent],
+    directives: [
+        ROUTER_DIRECTIVES,
+        NavbarComponent,
+        D3Component
+    ],
     template: template()
 })
 
